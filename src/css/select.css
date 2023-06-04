@@ -1,0 +1,28 @@
+
+/* Estilos adicionales para mejorar el select */
+#breedSelect {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #212121;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s, cursor 0.3s;
+}
+
+#breedSelect:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+#breedSelect option {
+  font-size: 14px;
+}
+
+.breed-select {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}

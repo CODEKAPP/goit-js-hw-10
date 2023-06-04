@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 10</title>
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/select.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/notiflix/dist/notiflix-3.2.6.min.css"
+    />
   </head>
   <body>
-    <select class="breed-select"></select>
-    <p class="loader">Loading data, please wait...</p>
+    <select id="breedSelect" class="breed-select"></select>
+    <!-- <div class="breed-select"></div> -->
+    <div class="loader">
+      <div>
+        <span class="loader-text">Loading data, please wait...</span>
+        <span class="loader-line"></span>
+      </div>
+    </div>
+
     <p class="error">Oops! Something went wrong! Try reloading the page!</p>
     <div class="cat-info"></div>
 

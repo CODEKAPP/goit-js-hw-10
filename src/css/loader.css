@@ -1,0 +1,143 @@
+.loader {
+  display: none;
+  margin: 20px;
+}
+
+.loader {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 38px;
+  background-color: #f6ecec;
+  background-image: radial-gradient(circle 14px, #0d161b 80%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+  border: 2px solid #c2bcbc;
+}
+
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
+
+.loader-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #a59a9a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 10px; /* Espacio entre los ojos y el texto */
+}
+
+.loader-line {
+  height: 4px;
+  width: 0%;
+  display: block;
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ffff00,
+    #00ff00
+  ); /* Colores del reggae */
+  animation: 5s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.error {
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  color: #ff0000;
+  animation: errorAnimation 6s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes errorAnimation {
+  0% {
+    color: red;
+    transform: scale(1);
+  }
+  50% {
+    color: #ff0000;
+    transform: scale(0.9);
+  }
+  100% {
+    color: red;
+    transform: scale(1);
+  }
+}
